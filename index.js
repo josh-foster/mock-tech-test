@@ -15,15 +15,15 @@ const defenceShip = {
 }
 
 const theMotherShip = (document.querySelector(".mothership").innerHTML =
-motherShip.name + motherShip.hitPoints);
+motherShip.name + " " + motherShip.hitPoints);
 
 const defenceships = document.getElementsByClassName("defenceship");
     for (var i = 0; i < defenceships.length; i++) {
-        defenceships[i].innerHTML = defenceShip.name + defenceShip.hitPoints;
+        defenceships[i].innerHTML = defenceShip.name + " " + defenceShip.hitPoints;
     }
 const atackships = document.getElementsByClassName("attackship");
     for (var i = 0; i < atackships.length; i++) {
-        atackships[i].innerHTML = attackShip.name + attackShip.hitPoints;
+        atackships[i].innerHTML = attackShip.name + " " + attackShip.hitPoints;
     }
 
 const button = document.getElementById("attackButton");
@@ -38,9 +38,10 @@ const attackTheShips = () => {
             MS.remove();
         } else {
             motherShip.hitPoints = motherShip.hitPoints - motherShip.damgageTaken;
-            MS.innerHTML = motherShip.name + (motherShip.hitPoints);  
+            MS.innerHTML = motherShip.name + " " + (motherShip.hitPoints);  
         }   
     }
 }
+
 
 
